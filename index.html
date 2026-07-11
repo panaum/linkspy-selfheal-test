@@ -1,6 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Analytics — Turn data into decisions</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,Segoe UI,Roboto,sans-serif; color:#0f172a; background:#fff; line-height:1.6; }
+  .nav { display:flex; justify-content:space-between; align-items:center; padding:20px 48px; border-bottom:1px solid #eef2f7; }
+  .brand { font-weight:800; font-size:20px; letter-spacing:-0.5px; }
+  .brand span { color:#6366f1; }
+  .nav a { margin-left:28px; color:#475569; text-decoration:none; font-size:15px; }
+  .hero { text-align:center; padding:96px 24px 72px; background:linear-gradient(160deg,#eef2ff,#fff 60%); }
+  .hero h1 { font-size:52px; line-height:1.1; letter-spacing:-1.5px; max-width:820px; margin:0 auto 20px; }
+  .hero p { font-size:20px; color:#475569; max-width:600px; margin:0 auto 40px; }
+  .cta-row { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn { display:inline-block; padding:15px 32px; border-radius:12px; font-weight:600; font-size:16px; text-decoration:none; }
+  .btn-primary { background:#6366f1; color:#fff; box-shadow:0 8px 24px rgba(99,102,241,.35); }
+  .btn-ghost { background:#fff; color:#0f172a; border:1px solid #cbd5e1; }
+  .logos { text-align:center; padding:48px 24px; color:#94a3b8; font-size:14px; letter-spacing:1px; }
+  .features { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; padding:24px 48px 80px; max-width:1080px; margin:0 auto; }
+  .card { padding:28px; border:1px solid #eef2f7; border-radius:16px; }
+  .card h3 { font-size:18px; margin-bottom:8px; }
+  .card p { color:#64748b; font-size:15px; }
+  .band { text-align:center; padding:64px 24px; background:#0f172a; color:#fff; }
+  .band h2 { font-size:34px; margin-bottom:24px; letter-spacing:-1px; }
+  footer { padding:32px 48px; color:#94a3b8; font-size:14px; display:flex; justify-content:space-between; border-top:1px solid #eef2f7; }
+  footer a { color:#94a3b8; text-decoration:none; margin-left:20px; }
+</style>
+</head>
 <body>
-<a href="/broken">this link is broken</a>
+  <nav class="nav">
+    <div class="brand">Northwind<span>.</span></div>
+    <div>
+      <a href="#features">Features</a>
+      <a href="https://httpbin.org/redirect-to?url=https%3A%2F%2Fhttpbin.org%2Fanything%2Fpricing&status_code=301">Pricing</a>
+      <a href="#">Docs</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>Turn your product data into decisions in minutes, not months.</h1>
+    <p>Northwind unifies every event, funnel and cohort into one clean dashboard your whole team can read.</p>
+    <div class="cta-row">
+      <!-- Primary CTA: points at an OLD campaign URL that now 301-redirects. -->
+      <a class="btn btn-primary" href="https://httpbin.org/redirect-to?url=https%3A%2F%2Fhttpbin.org%2Fanything%2Fbook-a-demo&status_code=301">Book a Demo</a>
+      <!-- Secondary CTA: also redirects. -->
+      <a class="btn btn-ghost" href="https://httpbin.org/redirect-to?url=https%3A%2F%2Fhttpbin.org%2Fanything%2Fpricing&status_code=301">See Pricing</a>
+    </div>
+  </section>
+
+  <div class="logos">TRUSTED BY TEAMS AT ACME · GLOBEX · INITECH · HOOLI</div>
+
+  <section id="features" class="features">
+    <div class="card"><h3>Live dashboards</h3><p>Every metric updates in real time, no warehouse required.</p></div>
+    <div class="card"><h3>Cohort analysis</h3><p>See exactly where users stick and where they drop off.</p></div>
+    <div class="card"><h3>One-click export</h3><p>Push any report to Slack, email or your BI tool.</p></div>
+  </section>
+
+  <section class="band">
+    <h2>Ready to see it on your data?</h2>
+    <!-- Another redirecting CTA. -->
+    <a class="btn btn-primary" href="https://httpbin.org/redirect-to?url=https%3A%2F%2Fhttpbin.org%2Fanything%2Fbook-a-demo&status_code=301">Start your free trial</a>
+  </section>
+
+  <footer>
+    <div>© Northwind Analytics</div>
+    <div>
+      <!-- A genuinely dead link (404). Self-heal must NOT auto-fix this — it only suggests. -->
+      <a href="https://httpbin.org/status/404">Old blog</a>
+      <a href="#">Careers</a>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>
 </body>
 </html>
